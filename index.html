@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="shortcut icon" href="HeartYarn.png" />
+<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="timeline">
+
+  <div class="container left">
+    <div class="content">
+      <h2>Instruction</h2>
+      <p>•Click the Sparkles "✨" or Message number (Ex. "Message 001") to start reading the Thread.</p>
+      <P>•Click the play button "▶️" to start the music and pause button "⏸️" to pause the music while you're reading.</P>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>I don't know why am I doing this.</h2>
+      <p>Written by: Oswald</p>
+        <p>Dedicated to: Ms. Cierra Calpito Ramos</p>
+      <p>About: Messages for you</p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>🎶MUSIC SPEAKS WHEN NO WORDS CAN EXPRESS MY FEELINGS🎶</h2>
+      <div class="left-col"><p>Tahanan: </p><img src="media/play.png" id="icon1"></div>
+      <div class="left-col"><p>Ikaw lang: </p><img src="media/play.png" id="icon2"></div>
+      <div class="left-col"><p>Ride Home: </p><img src="media/play.png" id="icon3"></div>
+      <div class="left-col"><p>Araw-araw: </p><img src="media/play.png" id="icon4"></div>
+      <div class="left-col"><p>Binibini: </p><img src="media/play.png" id="icon5"></div>
+    </div>
+  </div>
+
+  <audio id="mySong1">
+    <source src="media/TahananByAdie.mp3" type="audio/mp3">
+  </audio>
+  <audio id="mySong2">
+    <source src="media/IkawLangByNobita.mp3" type="audio/mp3">
+  </audio>
+  <audio id="mySong3">
+    <source src="media/RideHomeBenAndBen.mp3" type="audio/mp3">
+  </audio>
+  <audio id="mySong4">
+    <source src="media/ArawArawBenAndBen.mp3" type="audio/mp3">
+  </audio>
+  <audio id="mySong5">
+    <source src="media/BinibiniByZack.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="container right">
+    <div class="content">
+      <h2 href="#" onclick="typeWriter1()">Message 001: ✨</h2>
+      <p id="demo1">Message :: </p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2 onclick="typeWriter2()">Message 002✨</h2>
+      <p id="demo2">Message :: </p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2 onclick="typeWriter3()">Message 003✨</h2>
+      <p id="demo3">Message :: </p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2 onclick="typeWriter4()">Message 004✨</h2>
+      <p id="demo4">Message :: </p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2 onclick="typeWriter5()">Message 005✨</h2>
+      <p id="demo5">Message :: </p>
+    </div>
+  </div>
+<!--
+  <div class="container left">
+    <div class="content">
+      <h2 onclick="typeWriter6()">Message 006✨</h2>
+      <p id="demo6">Message :: </p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2 onclick="typeWriter7()">Message 007✨</h2>
+      <p id="demo7">Message :: </p>
+    </div>
+  </div>
+-->
+</body>
+
+
+
+
+
+<script>
+
+
+
+var mySong1 = document.getElementById("mySong1");
+var icon1 = document.getElementById("icon1")
+icon1.onclick = function(){
+  if(mySong1.paused){
+    mySong1.play();
+    icon1.src="media/pause.png";
+  }else{
+    mySong1.pause();
+    icon1.src="media/play.png";
+  }
+}
+
+var mySong2 = document.getElementById("mySong2");
+var icon2 = document.getElementById("icon2")
+icon2.onclick = function(){
+  if(mySong2.paused){
+    mySong2.play();
+    icon2.src="media/pause.png";
+  }else{
+    mySong2.pause();
+    icon2.src="media/play.png";
+  }
+}
+
+var mySong3 = document.getElementById("mySong3");
+var icon3 = document.getElementById("icon3")
+icon3.onclick = function(){
+  if(mySong3.paused){
+    mySong3.play();
+    icon3.src="media/pause.png";
+  }else{
+    mySong3.pause();
+    icon3.src="media/play.png";
+  }
+}
+
+var mySong4 = document.getElementById("mySong4");
+var icon4 = document.getElementById("icon4")
+icon4.onclick = function(){
+  if(mySong4.paused){
+    mySong4.play();
+    icon4.src="media/pause.png";
+  }else{
+    mySong4.pause();
+    icon4.src="media/play.png";
+  }
+}
+
+var mySong5 = document.getElementById("mySong5");
+var icon5 = document.getElementById("icon5")
+icon5.onclick = function(){
+  if(mySong5.paused){
+    mySong5.play();
+    icon5.src="media/pause.png";
+  }else{
+    mySong5.pause();
+    icon5.src="media/play.png";
+  }
+}
+
+
+
+var i1 = 0;
+var txt1 = 'I dont know why I did this web, I dont have any idea why';
+var speed1 = 30;
+function typeWriter1() {
+  if (i1 < txt1.length) {
+    document.getElementById("demo1").innerHTML += txt1.charAt(i1);
+    i1++;
+    setTimeout(typeWriter1, speed1);
+  }
+}
+
+var i2 = 0;
+var txt2 = 'Do you have any idea why I did this? I need explanation please';
+var speed2 = 30;
+function typeWriter2() {
+  if (i2 < txt2.length) {
+    document.getElementById("demo2").innerHTML += txt2.charAt(i2);
+    i2++;
+    setTimeout(typeWriter2, speed2);
+  }
+}
+
+var i3 = 0;
+var txt3 = 'Sabog na ata ako WHAHAHAHAHAHAHAHAHAHAHAHA, gusto ko gisingin mga kasama ko, overnight daw para duty pero laging sleep over amp';
+var speed3 = 30;
+function typeWriter3() {
+  if (i3 < txt3.length) {
+    document.getElementById("demo3").innerHTML += txt3.charAt(i3);
+    i3++;
+    setTimeout(typeWriter3, speed3);
+  }
+}
+
+var i4 = 0;
+var txt4 = 'Basain ko kaya shorts nila para pag gising isipin nila umuhi sila HAHAHAHAHAHAHAHAHAHA';
+var speed4 = 50;
+function typeWriter4() {
+  if (i4 < txt4.length) {
+    document.getElementById("demo4").innerHTML += txt4.charAt(i4);
+    i4++;
+    setTimeout(typeWriter4, speed4);
+  }
+}
+
+var i5 = 0;
+var txt5 = 'Oy ikaw anong oras mo balak matulog ah?';
+var speed5 = 50;
+function typeWriter5() {
+  if (i5 < txt5.length) {
+    document.getElementById("demo5").innerHTML += txt5.charAt(i5);
+    i5++;
+    setTimeout(typeWriter5, speed5);
+  }
+}
+
+var i6 = 0;
+var txt6 = 'Monday Morninggggggg, aminin ko na gusto ko na bukod sa gusto ko tumakas sa mga problemang meron ako, gusto ko din magpalakas sa bike para pag pwede na kitang puntahan, pupuntahan talaga kita palagi HAHAHAHA, habang nag babike ako ikaw na sa isip ko, literal, nag mumusic akong paulit ulit na mga kanta, at palagi kitang naiisip kaya napapalakas padyak ko sa pedal, parang hindi ako mapagod pagod ganun HAHAHAHAHA, imagine siguro pang 4th ride ko palang yung kanina, pero sa malayo pangalawa, yan nga pinakamalayo eh HAHAHAHAH, yung una Kong ride pangalawa na pinaka malayo, pagod na pagod agad ako nun as in, wala pa kami sa 25% ng papunta yun ah HAHAHAHAHAHAHA, pero nung ngayon, hindi ako makaramdam ng pagod as in, ni hindi ako uminom ng tubig at tumitigil eh, kulang nalang mangarera ako HAHAHAHAH, char, sira break ko, mag iingat ako, ayaw ko na nag aalala ka Baby, ayaw ko na may mga iniisip ka, gusto ko palagi kang OK kahit wag na ako basta ikaw oo, I love to to everything for you sa totoo lang😚 Baby Im so sorry, nabangga ako kahit nag iingat ako :< Sasabihin ko agad sayo kasi ayaw ko itago, ayaw ko din mas mag alala kapa kung hindi mo agad malalaman, baka isipin mo na malaa naging situation ko kaya hindi ko agad sinabi eh🙄 Basta, inaamin ko sinungaling din ako once na ako usapan, like kung OK lang, kung may problema, etc., Kasi ayaw ko na may nag aalala saakin hahaha, pero sayo, sayo nanaman!😤  Sayo! Hindi sa takot, iginagalang lang talaga kita, the way you are, the way you treat your love ones, I admire you, I respect you, and I love you Ms. Andrea Joy, my Baby🍼 Natatouch ako na sinusubukan mo akong mapilit bigyan ng pamasahe at pampagawa, na mabili for me yung bike, pero no, I can see your efforts pero sobra masyado kung ibibigay mo saakin yunnnnnnnnnnn, yes sobra sobra na yun for me, at kung sakali, yan na yung kauna unahan na regalo na matatanggap ko hahaha, hindi pa ako nakatanggap ng kahit ano since bata, except sa ninong at ninang na ah! Ayaw ko talaga sabihin Kila mama ehhhhhhhhhhhhh, pero bakit napa oo mo ako ng hindi nag dadalawang isippppppppp?! Sinasabi ko palagi na oo but I never did, pero para sayo ginawa ko, I can lie but I cant, I mean hindi pwede, Im scared to lose you, I cant lose you, gusto ko lang mahalin ka palagi, ang saya mong mahalin alam mo ba yun? Napaka comfortable at saya, I can feel safe, you are my comfort zone, aking tahanan😚 Hoy mag bawas ng inom! Sakto lang inumin ngayon! Nag aalala ako! Sabi mo mag uusap tayo🙁 Gusto kita makausap🙁 Gusto ko matakasan problema, sayo lang ako nakaktakbo eh🙁 Wala na yung mga gamit ko, wala na akong magawahahaha kaiyak... I will wait for you, gusto ko maassure na safe ka, nag aalala ako🙁 Hinang hina na ako Physically pero I will wait for you parin Baby🙁 OK na yung uminom ka eh, pero sana dyan ka lang, no unsure movements ganun? Naman eh, lalo akong nag aalala🙁 Feel ko talaga may problem? O ayaw mo na ako kausap? Or what? hahaha... Tulog na muna ako, gigising ako pag tulog na sila mama, byeeeeeeeeeee... Hindi kana pala nag chat after that, nag aalala ako sayo hahaha. Feel ko talaga naiwas ka, o may kung ano na reason na naturn off ka nalang bigla o hindi na naging interesado, baka bigla mo nalang akong hindi pansinin🙁 Yung sa tinanong ko pala sayo kahapon, pinost mo din kahapon? hahaha, IDK kung kahapon mo din dinelete o kanina, ewan, you are proud I know, ako din hahaha. I love you Ms. Joy, to the point na lagi na kitang inaalala, lagi na akong naeexcite kausap ka, lagi na kitang naiimagine, lagi na kita gustong kulitin😚';
+var speed6 = 50;
+function typeWriter6() {
+  if (i6 < txt6.length) {
+    document.getElementById("demo6").innerHTML += txt6.charAt(i6);
+    i6++;
+    setTimeout(typeWriter6, speed6);
+  }
+}
+
+var i7 = 0;
+var txt7 = 'Tuesday, alam ko talaga na hindi ako magigising Kasi sobrang pagod ako eh, nakailang KM ako this day, gusto ko pa sana mas malayuan at mabilis next time kaso wala na akong bike hahaha, nakakaiyak talaga kainis😢 So ayun, hindi ko expected, pero napanaginipan kita hoy! Sana walang nangyari na masama sayo, nag aalala ako Baby!😢 Ang gulo ng panaginip ko, parang binabangungot ako, parang ginugulo hanggang sa magising hahaha, hindi kana pala talaga sumagot sa chat ko kagabi :< , nag aalala lang naman ako eh, sige lang, OK lang... Feel ko talaga nalayo kana saakin, feel ko nagkarooon ka ng doubts, feel ko biglang hindi kana interesado saakin hahaha kainis🙁 Hindi parin ako makatulog, naiisip kita, kimikirot buong katawan ko amp, puro nalang ako tubig bawat kirot HAHAHAHAHAHAHAHA';
+var speed7 = 50;
+function typeWriter7() {
+  if (i7 < txt7.length) {
+    document.getElementById("demo7").innerHTML += txt7.charAt(i7);
+    i7++;
+    setTimeout(typeWriter7, speed7);
+  }
+}
+
+</script>
+
+</html>
